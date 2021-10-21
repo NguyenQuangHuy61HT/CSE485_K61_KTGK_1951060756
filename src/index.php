@@ -23,7 +23,7 @@
             <div class="row nav-menu pt-2 ">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="admin.php">Quản trị viên</a>
+                        <a class="navbar-brand" href="index.php">Quản trị viên</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -39,7 +39,7 @@
                 </nav>
             </div>
             <div class="row mt-3">
-                <div class="col-md-12 "  >
+                <div class="col-md-12 daitas "  >
     
                     <table class="table" >
                         <thead>
@@ -48,6 +48,8 @@
                                 <th scope="col">Họ và tên</th>
                                 <th scope="col">Giới tính</th>
                                 <th scope="col">Tuổi </th>
+                                 <th scope="col">Nhóm máu </th>
+                                <th scope="col">Thời gian </th>
                                 <th scope="col">Số điện thoại</th>
                                 <th scope="col">Sửa</th>
                                 <th scope="col">Xóa</th>
@@ -71,6 +73,8 @@
                                             <td> <?php echo $row['bd_name']?>  </td>
                                             <td> <?php echo $row['bd_sex']?>  </td>
                                             <td> <?php echo $row['bd_age']?>  </td>
+                                             <td> <?php echo $row['bd_bgroup']?></td>
+                                            <td>  <?php echo $row['bd_reg_date']?></td>
                                             <td>  <?php echo $row['bd_phno'] ?> </td>
                                             <td><a href="edit_user.php?bl_id=<?php echo $row['bl_id'];?>"><i class="fas fa-edit"></i></a></td>
                                             <td><a href="btn-delete.php?bl_id=<?php echo $row['bl_id'];?>" ><i class="far fa-trash-alt text-danger"></i></a></td>
@@ -83,7 +87,7 @@
                                                                     
                                     ?>
                         </tbody>
-                        <a href="information.php"><button type="button" class="btn btn-success">Chi tiết</button></a>
+                        <a href="chitiet.php"><button type="button" name="button" class="btn btn-success btn_change">Chi tiết</button></a>
                     </table>
                 </div>
             </div>
